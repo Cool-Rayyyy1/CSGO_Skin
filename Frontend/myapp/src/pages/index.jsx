@@ -5,6 +5,7 @@ import {Button, Form, Input} from 'semantic-ui-react';
 /**
  * The const MainPage defines the links to different APIs.
  * User could click different links to get into the webpage.
+ * Besides, it also defines a button to show the default 20 itemsby calling the API defined in the backend.
  */
 
  const mystyle = {
@@ -13,7 +14,6 @@ import {Button, Form, Input} from 'semantic-ui-react';
     padding: "10px",
     fontFamily: "Arial"
   };
-
 
 
 function MainPage () {

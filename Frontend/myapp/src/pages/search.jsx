@@ -1,5 +1,10 @@
 import React from "react"
 
+/**
+ * This file defines the Search page which will be implemented in the next following weeks
+ */
+
+
 function Search () {
     
     return (

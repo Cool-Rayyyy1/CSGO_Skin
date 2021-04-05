@@ -7,6 +7,11 @@ import {
   Redirect
 } from "react-router-dom";
 
+/**
+ * Class App defines the routes for all kinds of websites.
+ * App will check each Routes by order and if none of routes has been found, it will redirect to 404 page!
+ */
+
 import MainPage from "./pages";
 import NotFoundPage from "./pages/404";
 import Search from "./pages/search"

@@ -1,5 +1,9 @@
 import React from "react"
 
+/**
+ * This file defines the Inventory page which will be implemented in the next following weeks
+ */
+
 function Inventory () {
     
     return (
