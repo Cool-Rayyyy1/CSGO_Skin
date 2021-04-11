@@ -19,7 +19,7 @@ import Inventory from "./pages/inventory"
 class App extends Component{
   render() {
     return (
-      <div className="App">
+      <div >
         <Router>
           <Switch>
           <Route exact path ="/" component={MainPage} />
@@ -31,6 +31,7 @@ class App extends Component{
          </Router>
   
       </div>
+      
     );
   }
   
