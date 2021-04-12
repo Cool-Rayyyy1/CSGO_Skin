@@ -16,20 +16,21 @@ import MainPage from "./pages";
 import NotFoundPage from "./pages/404";
 import Search from "./pages/search"
 import Inventory from "./pages/inventory"
+import Result from "./pages/result"
 class App extends Component{
   render() {
     return (
-      <div >
+      <div>
         <Router>
           <Switch>
           <Route exact path ="/" component={MainPage} />
           <Route exact path = "/404" component={NotFoundPage} />
           <Route exact path = '/search' component={Search} />
           <Route exact path = '/inventory' component={Inventory} />
+          <Route exact path = '/result' component={Result}/>
           <Redirect to="/404"/>
           </Switch>
          </Router>
-  
       </div>
       
     );

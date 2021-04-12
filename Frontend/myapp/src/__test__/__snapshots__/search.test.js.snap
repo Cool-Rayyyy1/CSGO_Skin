@@ -1,0 +1,903 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`snapshot testing for profile screen 1`] = `
+<div
+  className="SearchBackGround"
+>
+  <div
+    className="SearchPageImage"
+  >
+    <div
+      className="Search"
+    >
+      <div
+        className="ui input"
+      >
+        <input
+          onChange={[Function]}
+          placeholder="Item id"
+          type="text"
+          value=""
+        />
+      </div>
+      <div
+        className="ui input"
+      >
+        <input
+          onChange={[Function]}
+          placeholder="Item Skin"
+          type="text"
+          value=""
+        />
+      </div>
+      <div
+        aria-expanded={false}
+        className="ui selection dropdown"
+        onBlur={[Function]}
+        onChange={[Function]}
+        onClick={[Function]}
+        onFocus={[Function]}
+        onKeyDown={[Function]}
+        onMouseDown={[Function]}
+        role="listbox"
+        tabIndex={0}
+      >
+        <div
+          aria-atomic={true}
+          aria-live="polite"
+          className="divider default text"
+          role="alert"
+        >
+          Select item Currency
+        </div>
+        <i
+          aria-hidden="true"
+          className="dropdown icon"
+          onClick={[Function]}
+        />
+        <div
+          className="menu transition"
+        >
+          <div
+            aria-checked={false}
+            aria-selected={true}
+            className="selected item"
+            onClick={[Function]}
+            role="option"
+            style={
+              Object {
+                "pointerEvents": "all",
+              }
+            }
+          >
+            <span
+              className="text"
+            >
+              RMB¥
+            </span>
+          </div>
+          <div
+            aria-checked={false}
+            aria-selected={false}
+            className="item"
+            onClick={[Function]}
+            role="option"
+            style={
+              Object {
+                "pointerEvents": "all",
+              }
+            }
+          >
+            <span
+              className="text"
+            >
+              USD$
+            </span>
+          </div>
+          <div
+            aria-checked={false}
+            aria-selected={false}
+            className="item"
+            onClick={[Function]}
+            role="option"
+            style={
+              Object {
+                "pointerEvents": "all",
+              }
+            }
+          >
+            <span
+              className="text"
+            >
+              EUR€
+            </span>
+          </div>
+          <div
+            aria-checked={false}
+            aria-selected={false}
+            className="item"
+            onClick={[Function]}
+            role="option"
+            style={
+              Object {
+                "pointerEvents": "all",
+              }
+            }
+          >
+            <span
+              className="text"
+            >
+              CAD$
+            </span>
+          </div>
+        </div>
+      </div>
+      <div
+        aria-expanded={false}
+        className="ui selection dropdown choose"
+        onBlur={[Function]}
+        onChange={[Function]}
+        onClick={[Function]}
+        onFocus={[Function]}
+        onKeyDown={[Function]}
+        onMouseDown={[Function]}
+        role="listbox"
+        tabIndex={0}
+      >
+        <div
+          aria-atomic={true}
+          aria-live="polite"
+          className="divider default text"
+          role="alert"
+        >
+          Select item rarity
+        </div>
+        <i
+          aria-hidden="true"
+          className="dropdown icon"
+          onClick={[Function]}
+        />
+        <div
+          className="menu transition"
+        >
+          <div
+            aria-checked={false}
+            aria-selected={true}
+            className="selected item"
+            onClick={[Function]}
+            role="option"
+            style={
+              Object {
+                "pointerEvents": "all",
+              }
+            }
+          >
+            <span
+              className="text"
+            >
+              Factory New
+            </span>
+          </div>
+          <div
+            aria-checked={false}
+            aria-selected={false}
+            className="item"
+            onClick={[Function]}
+            role="option"
+            style={
+              Object {
+                "pointerEvents": "all",
+              }
+            }
+          >
+            <span
+              className="text"
+            >
+              Minimal Wear
+            </span>
+          </div>
+          <div
+            aria-checked={false}
+            aria-selected={false}
+            className="item"
+            onClick={[Function]}
+            role="option"
+            style={
+              Object {
+                "pointerEvents": "all",
+              }
+            }
+          >
+            <span
+              className="text"
+            >
+              Field Tested
+            </span>
+          </div>
+          <div
+            aria-checked={false}
+            aria-selected={false}
+            className="item"
+            onClick={[Function]}
+            role="option"
+            style={
+              Object {
+                "pointerEvents": "all",
+              }
+            }
+          >
+            <span
+              className="text"
+            >
+              Well Worn
+            </span>
+          </div>
+          <div
+            aria-checked={false}
+            aria-selected={false}
+            className="item"
+            onClick={[Function]}
+            role="option"
+            style={
+              Object {
+                "pointerEvents": "all",
+              }
+            }
+          >
+            <span
+              className="text"
+            >
+              Battle Scarred
+            </span>
+          </div>
+        </div>
+      </div>
+      <div
+        aria-expanded={false}
+        className="ui selection dropdown"
+        onBlur={[Function]}
+        onChange={[Function]}
+        onClick={[Function]}
+        onFocus={[Function]}
+        onKeyDown={[Function]}
+        onMouseDown={[Function]}
+        role="listbox"
+        tabIndex={0}
+      >
+        <div
+          aria-atomic={true}
+          aria-live="polite"
+          className="divider default text"
+          role="alert"
+        >
+          Select item icon
+        </div>
+        <i
+          aria-hidden="true"
+          className="dropdown icon"
+          onClick={[Function]}
+        />
+        <div
+          className="menu transition"
+        >
+          <div
+            aria-checked={false}
+            aria-selected={true}
+            className="selected item"
+            onClick={[Function]}
+            role="option"
+            style={
+              Object {
+                "pointerEvents": "all",
+              }
+            }
+          >
+            <span
+              className="text"
+            >
+              Yes
+            </span>
+          </div>
+          <div
+            aria-checked={false}
+            aria-selected={false}
+            className="item"
+            onClick={[Function]}
+            role="option"
+            style={
+              Object {
+                "pointerEvents": "all",
+              }
+            }
+          >
+            <span
+              className="text"
+            >
+              No
+            </span>
+          </div>
+        </div>
+      </div>
+      <div
+        aria-expanded={false}
+        className="ui selection dropdown"
+        onBlur={[Function]}
+        onChange={[Function]}
+        onClick={[Function]}
+        onFocus={[Function]}
+        onKeyDown={[Function]}
+        onMouseDown={[Function]}
+        role="listbox"
+        tabIndex={0}
+      >
+        <div
+          aria-atomic={true}
+          aria-live="polite"
+          className="divider default text"
+          role="alert"
+        >
+          Select item time
+        </div>
+        <i
+          aria-hidden="true"
+          className="dropdown icon"
+          onClick={[Function]}
+        />
+        <div
+          className="menu transition"
+        >
+          <div
+            aria-checked={false}
+            aria-selected={true}
+            className="selected item"
+            onClick={[Function]}
+            role="option"
+            style={
+              Object {
+                "pointerEvents": "all",
+              }
+            }
+          >
+            <span
+              className="text"
+            >
+              7 days
+            </span>
+          </div>
+          <div
+            aria-checked={false}
+            aria-selected={false}
+            className="item"
+            onClick={[Function]}
+            role="option"
+            style={
+              Object {
+                "pointerEvents": "all",
+              }
+            }
+          >
+            <span
+              className="text"
+            >
+              14 days
+            </span>
+          </div>
+          <div
+            aria-checked={false}
+            aria-selected={false}
+            className="item"
+            onClick={[Function]}
+            role="option"
+            style={
+              Object {
+                "pointerEvents": "all",
+              }
+            }
+          >
+            <div
+              className="ui label"
+              onClick={[Function]}
+            >
+              21 days
+            </div>
+          </div>
+          <div
+            aria-checked={false}
+            aria-selected={false}
+            className="item"
+            onClick={[Function]}
+            role="option"
+            style={
+              Object {
+                "pointerEvents": "all",
+              }
+            }
+          >
+            <span
+              className="text"
+            >
+              30 days
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div>
+    <div>
+      <button
+        className="ui button"
+        onClick={[Function]}
+      >
+        Search
+      </button>
+    </div>
+  </div>
+  <div
+    className="SearchResult"
+  >
+    <img
+      className="photo"
+    />
+    <li>
+      Name: 
+      
+       | AmoutSold: 
+       | SD: 
+       avg_price: 
+       | highest_price : 
+    </li>
+  </div>
+</div>
+`;
+
+exports[`snapshot testing for search screen 1`] = `
+<div
+  className="SearchBackGround"
+>
+  <div
+    className="SearchPageImage"
+  >
+    <div
+      className="Search"
+    >
+      <div
+        className="ui input"
+      >
+        <input
+          onChange={[Function]}
+          placeholder="Item id"
+          type="text"
+          value=""
+        />
+      </div>
+      <div
+        className="ui input"
+      >
+        <input
+          onChange={[Function]}
+          placeholder="Item Skin"
+          type="text"
+          value=""
+        />
+      </div>
+      <div
+        aria-expanded={false}
+        className="ui selection dropdown"
+        onBlur={[Function]}
+        onChange={[Function]}
+        onClick={[Function]}
+        onFocus={[Function]}
+        onKeyDown={[Function]}
+        onMouseDown={[Function]}
+        role="listbox"
+        tabIndex={0}
+      >
+        <div
+          aria-atomic={true}
+          aria-live="polite"
+          className="divider default text"
+          role="alert"
+        >
+          Select item Currency
+        </div>
+        <i
+          aria-hidden="true"
+          className="dropdown icon"
+          onClick={[Function]}
+        />
+        <div
+          className="menu transition"
+        >
+          <div
+            aria-checked={false}
+            aria-selected={true}
+            className="selected item"
+            onClick={[Function]}
+            role="option"
+            style={
+              Object {
+                "pointerEvents": "all",
+              }
+            }
+          >
+            <span
+              className="text"
+            >
+              RMB¥
+            </span>
+          </div>
+          <div
+            aria-checked={false}
+            aria-selected={false}
+            className="item"
+            onClick={[Function]}
+            role="option"
+            style={
+              Object {
+                "pointerEvents": "all",
+              }
+            }
+          >
+            <span
+              className="text"
+            >
+              USD$
+            </span>
+          </div>
+          <div
+            aria-checked={false}
+            aria-selected={false}
+            className="item"
+            onClick={[Function]}
+            role="option"
+            style={
+              Object {
+                "pointerEvents": "all",
+              }
+            }
+          >
+            <span
+              className="text"
+            >
+              EUR€
+            </span>
+          </div>
+          <div
+            aria-checked={false}
+            aria-selected={false}
+            className="item"
+            onClick={[Function]}
+            role="option"
+            style={
+              Object {
+                "pointerEvents": "all",
+              }
+            }
+          >
+            <span
+              className="text"
+            >
+              CAD$
+            </span>
+          </div>
+        </div>
+      </div>
+      <div
+        aria-expanded={false}
+        className="ui selection dropdown choose"
+        onBlur={[Function]}
+        onChange={[Function]}
+        onClick={[Function]}
+        onFocus={[Function]}
+        onKeyDown={[Function]}
+        onMouseDown={[Function]}
+        role="listbox"
+        tabIndex={0}
+      >
+        <div
+          aria-atomic={true}
+          aria-live="polite"
+          className="divider default text"
+          role="alert"
+        >
+          Select item rarity
+        </div>
+        <i
+          aria-hidden="true"
+          className="dropdown icon"
+          onClick={[Function]}
+        />
+        <div
+          className="menu transition"
+        >
+          <div
+            aria-checked={false}
+            aria-selected={true}
+            className="selected item"
+            onClick={[Function]}
+            role="option"
+            style={
+              Object {
+                "pointerEvents": "all",
+              }
+            }
+          >
+            <span
+              className="text"
+            >
+              Factory New
+            </span>
+          </div>
+          <div
+            aria-checked={false}
+            aria-selected={false}
+            className="item"
+            onClick={[Function]}
+            role="option"
+            style={
+              Object {
+                "pointerEvents": "all",
+              }
+            }
+          >
+            <span
+              className="text"
+            >
+              Minimal Wear
+            </span>
+          </div>
+          <div
+            aria-checked={false}
+            aria-selected={false}
+            className="item"
+            onClick={[Function]}
+            role="option"
+            style={
+              Object {
+                "pointerEvents": "all",
+              }
+            }
+          >
+            <span
+              className="text"
+            >
+              Field Tested
+            </span>
+          </div>
+          <div
+            aria-checked={false}
+            aria-selected={false}
+            className="item"
+            onClick={[Function]}
+            role="option"
+            style={
+              Object {
+                "pointerEvents": "all",
+              }
+            }
+          >
+            <span
+              className="text"
+            >
+              Well Worn
+            </span>
+          </div>
+          <div
+            aria-checked={false}
+            aria-selected={false}
+            className="item"
+            onClick={[Function]}
+            role="option"
+            style={
+              Object {
+                "pointerEvents": "all",
+              }
+            }
+          >
+            <span
+              className="text"
+            >
+              Battle Scarred
+            </span>
+          </div>
+        </div>
+      </div>
+      <div
+        aria-expanded={false}
+        className="ui selection dropdown"
+        onBlur={[Function]}
+        onChange={[Function]}
+        onClick={[Function]}
+        onFocus={[Function]}
+        onKeyDown={[Function]}
+        onMouseDown={[Function]}
+        role="listbox"
+        tabIndex={0}
+      >
+        <div
+          aria-atomic={true}
+          aria-live="polite"
+          className="divider default text"
+          role="alert"
+        >
+          Select item icon
+        </div>
+        <i
+          aria-hidden="true"
+          className="dropdown icon"
+          onClick={[Function]}
+        />
+        <div
+          className="menu transition"
+        >
+          <div
+            aria-checked={false}
+            aria-selected={true}
+            className="selected item"
+            onClick={[Function]}
+            role="option"
+            style={
+              Object {
+                "pointerEvents": "all",
+              }
+            }
+          >
+            <span
+              className="text"
+            >
+              Yes
+            </span>
+          </div>
+          <div
+            aria-checked={false}
+            aria-selected={false}
+            className="item"
+            onClick={[Function]}
+            role="option"
+            style={
+              Object {
+                "pointerEvents": "all",
+              }
+            }
+          >
+            <span
+              className="text"
+            >
+              No
+            </span>
+          </div>
+        </div>
+      </div>
+      <div
+        aria-expanded={false}
+        className="ui selection dropdown"
+        onBlur={[Function]}
+        onChange={[Function]}
+        onClick={[Function]}
+        onFocus={[Function]}
+        onKeyDown={[Function]}
+        onMouseDown={[Function]}
+        role="listbox"
+        tabIndex={0}
+      >
+        <div
+          aria-atomic={true}
+          aria-live="polite"
+          className="divider default text"
+          role="alert"
+        >
+          Select item time
+        </div>
+        <i
+          aria-hidden="true"
+          className="dropdown icon"
+          onClick={[Function]}
+        />
+        <div
+          className="menu transition"
+        >
+          <div
+            aria-checked={false}
+            aria-selected={true}
+            className="selected item"
+            onClick={[Function]}
+            role="option"
+            style={
+              Object {
+                "pointerEvents": "all",
+              }
+            }
+          >
+            <span
+              className="text"
+            >
+              7 days
+            </span>
+          </div>
+          <div
+            aria-checked={false}
+            aria-selected={false}
+            className="item"
+            onClick={[Function]}
+            role="option"
+            style={
+              Object {
+                "pointerEvents": "all",
+              }
+            }
+          >
+            <span
+              className="text"
+            >
+              14 days
+            </span>
+          </div>
+          <div
+            aria-checked={false}
+            aria-selected={false}
+            className="item"
+            onClick={[Function]}
+            role="option"
+            style={
+              Object {
+                "pointerEvents": "all",
+              }
+            }
+          >
+            <div
+              className="ui label"
+              onClick={[Function]}
+            >
+              21 days
+            </div>
+          </div>
+          <div
+            aria-checked={false}
+            aria-selected={false}
+            className="item"
+            onClick={[Function]}
+            role="option"
+            style={
+              Object {
+                "pointerEvents": "all",
+              }
+            }
+          >
+            <span
+              className="text"
+            >
+              30 days
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div>
+    <div>
+      <button
+        className="ui button"
+        onClick={[Function]}
+      >
+        Search
+      </button>
+    </div>
+  </div>
+  <div
+    className="SearchResult"
+  >
+    <img
+      className="photo"
+    />
+    <li>
+      Name: 
+      
+       | AmoutSold: 
+       | SD: 
+       avg_price: 
+       | highest_price : 
+    </li>
+  </div>
+</div>
+`;
