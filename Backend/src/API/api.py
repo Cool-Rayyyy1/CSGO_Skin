@@ -2,8 +2,10 @@ import mysql.connector
 import flask
 import json
 import requests
-from flask import request, Response
-
+from flask import request, Response, render_template
+import numpy as np
+from sklearn.linear_model import LinearRegression
+import matplotlib.pyplot as plt
 # These functions are used to avoid compiler errors if the item does not have corresponding errors
 def getName(item):
     try:
@@ -154,5 +156,74 @@ def api_get_authorID():
     except Exception as e:
         return str(e)
 
+# This api also defines a API which is used to call the search API. This API also checks for the required 6 parameters.
+@app.route('/api/getResult', methods=['GET'])
+def api_get_Result():
+    mu = int(float(request.args.get('avg')))
+    if mu is None:
+        return Response(response=json.dumps(dict(message="Please give the avg price")),
+                        status=400)
+    sigma = int(float(request.args.get('sd')))
+    if sigma is None:
+        return Response(response=json.dumps(dict(message="Please give the sd price")),
+                        status=400)
+    inputNum = int(float(request.args.get('num')))
+    if inputNum is None:
+        return Response(response=json.dumps(dict(message="Please give the Num price")),
+                        status=400)
+    inputMedian = int(float(request.args.get('median')))
+    if inputMedian is None:
+        return Response(response=json.dumps(dict(message="Please give the median price")),
+                        status=400)
+    # now create random numbers from normal distribution
+    y = np.random.normal(mu, sigma, inputNum)
+    x = np.arange(1, inputNum + 1).reshape((-1, 1))
+    model = LinearRegression().fit(x, y)
+    r_sq = model.score(x, y)
+    yPredict = model.intercept_ + model.coef_ * (inputNum + 1)
+
+    if yPredict > inputMedian:
+        result = {
+            "decision": "false",
+            "predicted": str(yPredict)
+        }
+        return result
+    else:
+        result = {
+            "decision": "true",
+            "predicted": str(yPredict)
+        }
+        return result
+
+# This api also defines a API which is used to call the search API. This API also checks for the required 6 parameters.
+@app.route('/api/getPic', methods=['GET'])
+def api_get_Pic():
+    mu = int(float(request.args.get('avg')))
+    if mu is None:
+        return Response(response=json.dumps(dict(message="Please give the avg price")),
+                        status=400)
+    sigma = int(float(request.args.get('sd')))
+    if sigma is None:
+        return Response(response=json.dumps(dict(message="Please give the sd price")),
+                        status=400)
+    inputNum = int(float(request.args.get('num')))
+    if inputNum is None:
+        return Response(response=json.dumps(dict(message="Please give the Num price")),
+                        status=400)
+    inputMedian = int(float(request.args.get('median')))
+    if inputMedian is None:
+        return Response(response=json.dumps(dict(message="Please give the median price")),
+                        status=400)
+    # now create random numbers from normal distribution
+    y = np.random.normal(mu, sigma, inputNum)
+    x = np.arange(1, inputNum + 1).reshape((-1, 1))
+    model = LinearRegression().fit(x, y)
+
+    count, bins, ignored = plt.hist(y, 30, density=True)
+    plt.plot(bins, 1 / (sigma * np.sqrt(2 * np.pi)) *
+             np.exp(- (bins - mu) ** 2 / (2 * sigma ** 2)),
+             linewidth=2, color='r')
+    plt.savefig('./Images/newPlot.png')
+    return render_template('untitled1.html', name='newPlot', url='./Images/newPlot.png')
 
 app.run()

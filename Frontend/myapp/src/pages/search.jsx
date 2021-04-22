@@ -1,13 +1,56 @@
-import React, { useState } from "react"
+import React, { useEffect, useState } from "react"
 import { Button, Input, Select } from "semantic-ui-react"
 import "../assets/style.css"
+import Model from "../component/model"
+import plot from '../assets/new_plot.png'
+
 /**
  * This file defines the Search page 
  */
-
 function Search () {
 
-  //These consts defines the options that user could choose when search for the result
+  // These consts are used to handle the action performed
+  const handleRarity = (event, data) => {
+    setRarity(data.value)
+  };
+  const handleIcon = (event, data) => {
+      setIcon(data.value)
+  };
+  const handleTime = (event, data) => {
+      setTime(data.value)
+  };
+  const handleCurrency = (event, data) => {
+      setCurrency(data.value)
+  };
+  const openModal = () => {
+    modalRef.current.openModal()
+    setSplay(true)
+  }
+  // These consts are used to hold the data
+  const [id, setId] = useState("")
+  const [currency, setCurrency] = useState("")
+  const [skin, setSkin] = useState("")
+  const [rarity, setRarity] = useState("")
+  const [icon, setIcon] = useState("")
+  const [time, setTime] = useState("")
+  const [item, setItem] = useState({});
+  const modalRef = React.useRef(); 
+  const [value, setValue] = useState("")
+  const [decision, setDecision] = useState("")
+  const [Splay, setSplay] = useState(false)
+
+  // call the api when the splay is true
+  useEffect(() => {
+    if (Splay === true) {
+      fetch('/api/getResult?avg=' + item.average_price + "&sd=" + item.standard_deviation  + "&num=" + item.amount_sold + "&median=" + item.median_price)
+                            .then(response =>
+                                response.json()).then(data => {setValue(data.predicted); setDecision(data.decision)})
+    }
+    
+  }, [Splay]);
+
+  // These consts defines the action that going to be perfomed when user chooses some options
+ 
   const Rarityoptions = [
       { 
         key:"Factory New",
@@ -59,7 +102,7 @@ function Search () {
         },
         {
           key: "21 days",
-          label: "21 days",
+          text: "21 days",
           value: "21",
         },
         { 
@@ -91,47 +134,25 @@ function Search () {
         }
   ]
 
-  // These consts defines the action that going to be perfomed when user chooses some options
-  const handleRarity = (event, data) => {
-      setRarity(data.value)
-    };
-  const handleIcon = (event, data) => {
-      setIcon(data.value)
-  };
-  const handleTime = (event, data) => {
-      setTime(data.value)
-  };
-  const handleCurrency = (event, data) => {
-      setCurrency(data.value)
-  };
-
-  // These consts defines the consts to hold the data
-  const [id, setId] = useState("")
-  const [currency, setCurrency] = useState("")
-  const [skin, setSkin] = useState("")
-  const [rarity, setRarity] = useState("")
-  const [icon, setIcon] = useState("")
-  const [time, setTime] = useState("")
-  const [item, setItem] = useState({});
 
   return (
       <div className="SearchBackGround">
           <div className="SearchPageImage">
             <div className="Search">
-                <Input
+                <Input style = {{margin:"4px"}}
                     placeholder="Item id"
                     value={id}
                     onChange={e => setId(e.target.value)}
                 />
-                <Input
+                <Input style = {{margin:"4px"}}
                     placeholder="Item Skin"
                     value={skin}
                     onChange={e => setSkin(e.target.value)}
-                />
-                <Select placeholder='Select item Currency' options={Currencyoptions} onChange={handleCurrency} />
-                <Select placeholder='Select item rarity' options={Rarityoptions} onChange={handleRarity} className="choose"/>
-                <Select placeholder='Select item icon' options={Iconoptions} onChange={handleIcon}/>
-                <Select placeholder='Select item time' options={Timeoptions} onChange={handleTime} />
+                /> 
+                <Select  style = {{margin:"4px"}} placeholder='Select item Currency' options={Currencyoptions} onChange={handleCurrency} />
+                <Select  style = {{margin:"4px"}} placeholder='Select item rarity' options={Rarityoptions} onChange={handleRarity} className="choose"/>
+                <Select  style = {{margin:"4px"}} placeholder='Select item icon' options={Iconoptions} onChange={handleIcon}/>
+                <Select  style = {{margin:"4px"}} placeholder='Select item time' options={Timeoptions} onChange={handleTime} />
             </div>
             
           </div>
@@ -154,7 +175,15 @@ function Search () {
               Name: {skin} | AmoutSold: {item.amount_sold} | SD: {item.standard_deviation} avg_price: {item.average_price} |
               highest_price : {item.highest_price}
             </li>
-            
+            <Button content='Secondary' secondary onClick={openModal}>analyze</Button>
+            <Model ref={modalRef} >
+              <img src={plot}/>
+              <Button content='Secondary' secondary onClick={() => {modalRef.current.close();setSplay(false)}}>Close</Button>
+              <li>
+                value: {value}
+                decision: {decision}
+              </li>
+            </Model>
           </div>
           
       </div>

@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
-import {Button} from 'semantic-ui-react';
+import { Link,  useHistory } from "react-router-dom";
+import {Button, Input, Icon, Label} from 'semantic-ui-react';
 import "../assets/style.css"
 
 /**
@@ -9,8 +9,12 @@ import "../assets/style.css"
  * Besides, it also defines a button to show the default 20 itemsby calling the API defined in the backend.
  */
 
-function MainPage () {
 
+
+
+
+function MainPage () {
+    const history = useHistory();
     // An list to hold the 20 items
     const [item, setItems] = useState([])
 
@@ -30,9 +34,22 @@ function MainPage () {
     return (
         <div className="App">
             <header className="lan">
+                <div className="button3">
+                    <Input 
+                    action={{color: 'black',labelPosition: 'left',icon: 'cart',content: 'Checkout',}}
+                    actionPosition='left'
+                    placeholder='Search...'
+                    defaultValue='0.0'
+                    />
+                    <Input
+                        icon={<Icon name='search' inverted circular link />}
+                        placeholder='Search User...'
+                    />
+                </div>
                 <div className="button2">
-                    <Button content='Secondary' secondary ><Link to="/search">Search</Link></Button>
-                    <Button content='Secondary' secondary ><Link to="/inventory">Inventory</Link></Button>
+                    <Button content='Secondary' secondary onClick={() => history.push('/')}>Main</Button>
+                    <Button content='Secondary' secondary onClick={() => history.push('/search')}>Search</Button>
+                    <Button content='Secondary' secondary onClick={() => history.push('/inventory')}>Inventory</Button>
                 </div>
             </header>
             <div className="MainPageImage">
@@ -45,6 +62,13 @@ function MainPage () {
                                 <li key={key}>
                                 Name: {item.name} | AveragePrice: {item.AveragePrice} | AverageSold: {item.AverageSold} | rarity: {item.rarity}
                                 </li>
+                                
+                                    <Button color='blue'>
+                                    <Icon name='heart' />
+                                        Like
+                                    </Button>
+                                    
+                              
                             </div>
                             
                         ))}

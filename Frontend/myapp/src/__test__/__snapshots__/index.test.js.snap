@@ -1,0 +1,77 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`snapshot testing for profile screen 1`] = `
+<div
+  className="App"
+>
+  <header
+    className="lan"
+  >
+    <div
+      className="button3"
+    >
+      <div
+        className="ui left action input"
+      >
+        <button
+          className="ui black icon left labeled button"
+          onClick={[Function]}
+        >
+          <i
+            aria-hidden="true"
+            className="cart icon"
+            onClick={[Function]}
+          />
+          Checkout
+        </button>
+        <input
+          defaultValue="0.0"
+          onChange={[Function]}
+          placeholder="Search..."
+          type="text"
+        />
+      </div>
+      <div
+        className="ui icon input"
+      >
+        <input
+          onChange={[Function]}
+          placeholder="Search User..."
+          type="text"
+        />
+        <i
+          aria-hidden="true"
+          className="search circular inverted link icon"
+          onClick={[Function]}
+        />
+      </div>
+    </div>
+    <div
+      className="button2"
+    >
+      <button
+        className="ui secondary button"
+        onClick={[Function]}
+      >
+        Main
+      </button>
+      <button
+        className="ui secondary button"
+        onClick={[Function]}
+      >
+        Search
+      </button>
+      <button
+        className="ui secondary button"
+        onClick={[Function]}
+      >
+        Inventory
+      </button>
+    </div>
+  </header>
+  <div
+    className="MainPageImage"
+  />
+  <div />
+</div>
+`;
